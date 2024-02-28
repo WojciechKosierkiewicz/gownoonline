@@ -2,11 +2,20 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" href="%sveltekit.assets%/styles.css"/>
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%sveltekit.head%
+		<style>
+		body{
+			background-image: url("%sveltekit.assets%/blur.gif");
+			/* background-size: cover; */
+			background-repeat: repeat;
+		}
+	</style>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
+		<marquee><h1>DZIEKAN SKURWYSYN ROBI MI LODA</h1></marquee>
 	</body>
 </html>
