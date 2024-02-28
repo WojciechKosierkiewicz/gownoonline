@@ -8,14 +8,14 @@
 		%sveltekit.head%
 		<style>
 		body{
-			background-image: url("%sveltekit.assets%/blur.gif");
+			/* background-image: url("%sveltekit.assets%/200w.gif"); */
 			/* background-size: cover; */
-			background-repeat: repeat;
+			/* background-repeat: repeat; */
+			animation: rotate 20s linear infinite;
 		}
 	</style>
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-		<marquee><h1>DZIEKAN SKURWYSYN ROBI MI LODA</h1></marquee>
+		<div style="display: contents;">%sveltekit.body%</div>
 	</body>
 </html>
