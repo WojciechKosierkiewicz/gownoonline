@@ -1,18 +1,18 @@
 <script>
-	import Gifbutton from '../lib/components/gifbutton.svelte';
-    import eart from '$lib/images/earth.gif';
-    import spinmak from '$lib/images/spinmask.gif';
-    import phot from '$lib/images/photo.gif'
+	import Gifbutton from '$components/gifbutton.svelte';
+    import eart from '/smietnik/earth.gif';
+    import spinmak from '/smietnik/spinmask.gif';
+    import phot from '/smietnik/photo.gif'
 </script>
 
 		<nav>
 			<Gifbutton imageUrl={eart} text="Home" href="/" />
 			<Gifbutton imageUrl={spinmak} text="Onas" href="/onas" />
-			<Gifbutton imageUrl={phot} text="Galeria" href="/galeria" />
+			<Gifbutton imageUrl={phot} text="Galeria" href="/galeria"/>
 		</nav>
 
-<div class="tlo">
-	<div class="rotor">
+<div class="tlo dojebane_tlo">
+	<div>
 		<slot />
 	</div>
 </div>
@@ -24,17 +24,19 @@
 		width: 100%;
         height: 50px;
 	}
-	.rotor {
-		animation: rotate 10s linear infinite;
+	.dojebane_tlo {
+		background-image: url('/smietnik/background.gif');
+		background-repeat: repeat;
 	}
-    .tlo    {
+	.dojebane_tlo > div {
+	animation: rotate 10s linear infinite;
+	}
+    .tlo{
         /* position: fixed; */
         overflow: auto;
-        background-image: url('$lib/images/background.gif');
         background-size: 100%;
-        background-repeat: repeat;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         animation: tloanim 10s linear infinite;
     }
 

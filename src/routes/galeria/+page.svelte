@@ -1,5 +1,5 @@
 <script>
-    import rogacz from '$lib/images/rogacz-piwo.gif';
+    import rogacz from '/smietnik/rogacz-piwo.gif';
 </script>
 
 {#each new Array(400) as _, i}

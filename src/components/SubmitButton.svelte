@@ -1,14 +1,17 @@
-<script>
+
+<script lang="ts">
+    // @ts-nocheck
     export let text = '';
     export let imageUrl = '';
-    export let href = '';
+    export let smallMode = false;
+    export let ref = null;
 </script>
 
-<div class="bttndiv">
+<div {ref} class="bttndiv">
 {#if imageUrl != ''}
-    <img class="bttnim" src={imageUrl} alt="asfdas"/>
+    <img class={smallMode ? "bttnim_small" : "bttnim"} src={imageUrl} alt="asfdas"/>
 {/if}
-<a class="bttna" href={href}>{text}</a>
+<button class="bttna" type="submit">{text}</button>
 </div>
 
 <style>
@@ -24,10 +27,14 @@
         width: 40px;
         height: 40px;
     }
+    .bttnim_small{
+        width:16px;
+        height:16px;
+    }
     .bttna{
         font-weight: bold;
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 24px;
+        font-size: 16px;
         text-decoration: none;
         color: black;
     }

@@ -1,9 +1,6 @@
 <script>
-    import logo from '$lib/images/logo.gif'; 
-    import hacker from '$lib/images/hacker3d.gif';
-    import earth from '$lib/images/earth.gif';
-    import MainSection from '$lib/components/MainSection.svelte';
-    import rogacz from '$lib/images/rogacz-piwo.gif';
+    import logo from '/smietnik/logo.gif'; 
+    import hacker from '/smietnik/hacker3d.gif';
 </script>
 
 <style>
@@ -15,7 +12,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        animation: dziekan 1.5s linear infinite; 
+        animation: dziekan 1.5s linear infinite;
         
     }
 
